@@ -1,0 +1,12 @@
+# 数据集配置（数据集本身不随仓库提交，按 README 的步骤在本地重建）
+#
+# 注意：YOLOv5 会相对 yolov5/ 目录解析 path，所以这里写 ../dataset，
+# 指向仓库根目录下的 dataset/。
+
+path: ../dataset
+train: images/train
+val: images/val
+
+# 类别数必须与 names 的长度一致
+nc: 1
+names: ['person']

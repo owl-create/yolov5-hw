@@ -1,0 +1,21 @@
+# 数据集与训练产物：按要求只保留结果文件，数据集留在本地
+dataset/
+runs/
+*.cache
+*.cache.npy
+
+# 预训练权重（yolov5 会自动下载），只提交训练产出的 best.pt
+yolov5s.pt
+yolov5m.pt
+yolov5l.pt
+yolov5x.pt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# 临时文件
+*.log
+*.tmp

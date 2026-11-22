@@ -1,0 +1,27 @@
+# 运行环境（实测：Windows + Python 3.12 + CPU，无 GPU 也能跑）
+# 安装：pip install -r requirements.txt
+
+# 框架
+torch>=2.2.0
+torchvision>=0.17.0
+
+# YOLOv5 依赖
+numpy>=1.23.5
+opencv-python>=4.6.0
+pillow>=10.0
+matplotlib>=3.3
+pandas>=1.1.4
+seaborn>=0.11.0
+scipy>=1.4.1
+psutil
+PyYAML>=5.3.1
+requests>=2.32.2
+tqdm>=4.64.0
+packaging
+thop>=0.1.1
+gitpython
+ipython
+tensorboard>=2.4.1
+
+# YOLOv5 v7.0 仍使用 pkg_resources，setuptools>=81 已移除该模块
+setuptools<81
