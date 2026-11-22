@@ -62,6 +62,9 @@ CPU 上 640 px 单轮要 8 min，24 轮之外还要大量时间，所以降到 4
    `FreeTypeFont.getsize`，都会让 YOLOv5 v7.0 直接报错。仓库里对应位置做了兼容改动（都带注释，
    `torch>=2.6 compat` / `numpy>=2` / `Pillow>=10`）；另外 `requirements.txt` 把 setuptools 限制在 <81，
    否则 `pkg_resources` 不可用。
+5. **受限环境**：在禁止创建命名管道的机器上（如某些沙箱），YOLOv5 建 labels 缓存时用 `multiprocessing.Pool`
+   会失败，需要预先生成 `dataset/labels/*.cache`，或把 `yolov5/utils/dataloaders.py` 里的 `Pool` 换成线程池；
+   普通桌面环境不会遇到。
 
 ## 7. 复现步骤
 
